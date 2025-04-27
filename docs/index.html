@@ -1,0 +1,30 @@
+
+<h1>🌶️辣条输入法1.0.2版本</h1>
+<input id="x"><a href="javascript:A()" onclick="A()">搜字</a>
+<p id="y"></p>
+<div>
+	<button onclick="a('a')">a</button><button onclick="a('b')">b</button><button onclick="a('c')">c</button><button onclick="a('d')">d</button><br>
+	<button onclick="a('e')">e</button><button onclick="a('f')">f</button><button onclick="a('g')">g</button><button onclick="a('h')">h</button><br>
+	<button onclick="a('i')">i</button><button onclick="a('j')">j</button><button onclick="a('k')">k</button><button onclick="a('l')">l</button><br>
+	<button onclick="a('m')">m</button><button onclick="a('n')">n</button><button onclick="a('o')">o</button><button onclick="a('p')">p</button><br>
+	<button onclick="a('q')">q</button><button onclick="a('r')">r</button><button onclick="a('s')">s</button><button onclick="a('t')">t</button><br>
+	<button onclick="a('u')">u</button><button onclick="a('v')">v</button><button onclick="a('w')">w</button><button onclick="a('x')">x</button><br>
+	<button onclick="a('y')">y</button><button onclick="a('z')">z</button>
+</div>
+<script>
+let c={"a": ["啊", "阿", "安"],"b": ["吧", "把", "八"],"c": ["从", "次", "出"],"d": ["的", "地", "到"],"e": ["饿", "额", "恩"],"f": ["发", "法", "反"],"g": ["个", "给", "更"],"h": ["好", "很", "后"],"i": ["爱", "已", "依"],"j": ["就", "进", "家"],"k": ["看", "可", "快"],"l": ["了", "来", "里"],"m": ["吗", "没", "门"],"n": ["你", "能", "呢"],"o": ["哦", "偶", "欧"],"p": ["跑", "怕", "朋友"],"q": ["去", "前", "起"],"r": ["人", "日", "如"],"s": ["是", "上", "说"],"t": ["他", "她", "它"],"u": ["哇", "屋", "无"],"v": ["喂", "微", "威"],"w": ["我", "问", "完"],"x": ["下", "想", "写"],"y": ["有", "一", "也"],"z": ["在", "走", "做"]};
+function A(){
+	var b=document.getElementById("x").value
+	if(c[b]){
+		document.getElementById("y").innerHTML = c[b].map(w=>"<button onclick='B(\""+w+"\")'>"+w+"</button>").join(" ");
+	}else{
+		alert("这个是有小孩子开发的,字体还不全哟。");
+	}
+}
+function a(xu) {
+  document.getElementById("x").value+=xu;
+}
+function B(w){
+	document.getElementById("x").value=w;
+}
+</script>
